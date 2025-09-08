@@ -1,5 +1,5 @@
 
-fetch('http://localhost:3000/students')
+fetch('https://api-students-production.up.railway.app/students')
     .then(response => response.json())
     .then(data => {
         const cards = document.querySelector('.cards');
@@ -30,7 +30,7 @@ formUser.addEventListener('submit', e =>{
     const formData = new FormData(formUser);
     const data = Object.fromEntries(formData.entries())
     
-    fetch('http://localhost:3000/students', {
+    fetch('https://api-students-production.up.railway.app/students', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
